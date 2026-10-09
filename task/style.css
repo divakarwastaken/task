@@ -1,880 +1,1217 @@
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap');
-
 @import url('https://fonts.googleapis.com/css2?family=Abhaya+Libre:wght@400;500;600;700;800&display=swap');
 
 
+/* =========================================
+   GLOBAL STYLES
+========================================= */
 
-*{
-    margin: 0%;
-    padding: 0%;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-html{
+html {
     scroll-behavior: smooth;
+    scroll-padding-top: 20px;
 }
 
-::-webkit-scrollbar{
-    display: none;
-
-}
-
-body{
-    
+body {
     width: 100%;
-    
+    overflow-x: hidden;
+    background-color: #fffdf8;
+    color: #29251f;
+    font-family: "Abhaya Libre", serif;
 }
 
-section{
-    height: 100vh;
-    width: 100%;
-}
-
-header{
-    display: flex;
-    height: 10vh;
-    margin-top: 10px;
-}
-
-.head_left_txt{
-    height: 10vh;
-    width: 20%;
-
-    
-    
-    
-}
-.logo{
-    height: 10vh;
-    width: 60%;
-    display: flex;
-    justify-content: center;
-}
-
-.head_right_icon{
-    height: 10vh;
-    width: 20%;
-    display: flex;
-    justify-content: space-around ;
-    align-items: center;
-}
-
-nav{
-    height: 10vh;
-    width: 100%;
-    display: flex;
-    gap: 100px;
-    justify-content: center;
-    align-items: center;
-   
-
-    
-    
-}
-a{
+a {
     text-decoration: none;
+    color: inherit;
 }
 
-main{
-    height: 80vh ;
-    width: 100%;
+img {
+    max-width: 100%;
+}
+
+::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #035f66;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: #f4eee5;
+}
+
+
+/* =========================================
+   HEADER
+========================================= */
+
+header {
     display: flex;
-    background: linear-gradient(to bottom, rgba(255,255,255,0.15) 0%, rgba(0,0,0,0.15) 100%), 
-    radial-gradient(at top center, rgba(255,255,255,0.40) 0%, rgba(0,0,0,0.40) 120%) #989898;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 90px;
+    width: 100%;
+    padding: 10px 5%;
+    background-color: #fffdf8;
 }
 
-.main_left{
+.head_left_txt {
+    width: 20%;
+    display: flex;
+    align-items: center;
+}
 
-    height: 80vh;
+.head_left_txt h1 {
+    font-family: "Dancing Script", cursive;
+    color: #035f66;
+}
+
+.logo {
     width: 60%;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.main_right{
-    height: 80vh;
+.logo img {
+    height: 70px;
+    width: auto;
+    object-fit: contain;
+}
+
+.head_right_icon {
+    width: 20%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 15px;
+}
+
+.head_right_icon img {
+    width: 22px;
+    height: 22px;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+}
+
+.head_right_icon img:hover {
+    transform: scale(1.15);
+}
+
+
+/* =========================================
+   NAVIGATION
+========================================= */
+
+nav {
+    width: 100%;
+    min-height: 65px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 55px;
+    flex-wrap: wrap;
+    padding: 15px;
+    background-color: #fffdf8;
+}
+
+nav a {
+    font-family: "Abhaya Libre", serif;
+    font-size: 16px;
+    font-weight: 700;
+    color: #29251f;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #035f66;
+}
+
+
+/* =========================================
+   HERO / MAIN SECTION
+========================================= */
+
+main {
+    min-height: 80vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    background:
+        linear-gradient(
+            to right,
+            rgba(255, 255, 255, 0.88),
+            rgba(255, 255, 255, 0.2)
+        ),
+        url("https://images.unsplash.com/photo-1490312278390-ab64016e0aa9?auto=format&fit=crop&w=1800&q=85")
+        center / cover no-repeat;
+}
+
+.main_left {
+    min-height: 80vh;
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+}
+
+.main_right {
+    min-height: 80vh;
     width: 40%;
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 20px;
 }
 
-.ex_txt_1{
+.main_right img {
+    max-width: 100%;
+    max-height: 450px;
+    object-fit: contain;
+}
+
+.ex_txt_1 {
     font-family: "Dancing Script", cursive;
-    color: black;
-    font-size: 40px;
-
+    color: #29251f;
+    font-size: clamp(28px, 3.2vw, 40px);
+    margin-bottom: 15px;
 }
 
-.ex_txt_2{
-    font-size: 60px;
+.ex_txt_2 {
+    font-family: "Abhaya Libre", serif;
+    font-size: clamp(38px, 5vw, 60px);
+    line-height: 1.1;
     color: #035f66;
+    margin-bottom: 25px;
 }
 
-.shop_btn{
+.shop_btn {
     width: 150px;
-    height: 40px;
+    height: 42px;
     font-family: "Dancing Script", cursive;
     background-color: #035f66;
     color: aliceblue;
-    font-size: larger; 
-    border: 0;  
+    font-size: 22px;
+    border: none;
     cursor: pointer;
-    
+    transition: background-color 0.3s ease;
 }
 
-#shopping_category{
-    height: 100vh;
+.shop_btn:hover {
+    background-color: #023f44;
+}
+
+
+/* =========================================
+   SHOPPING CATEGORIES
+========================================= */
+
+#shopping_category {
+    min-height: 100vh;
     width: 100%;
-    
+    padding: 40px 5%;
+    background-color: #fffdf8;
 }
 
-.category_txt{
-    height: 30vh;
+.category_txt {
+    min-height: 25vh;
     width: 100%;
-}
-
-.category_txt_1{
-
-    font-family: "Dancing Script", cursive;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     text-align: center;
-    margin: 20px;
+}
+
+.category_txt_1 {
+    font-family: "Dancing Script", cursive;
+    margin: 15px;
     font-size: 40px;
-
+    font-weight: 600;
 }
 
-.category_txt_2{
+.category_txt_2 {
     color: #288990;
+    font-family: "Abhaya Libre", serif;
+    font-size: clamp(36px, 5vw, 60px);
+}
+
+.collection {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    justify-items: center;
+    gap: 30px;
+    padding: 20px 0;
+}
+
+.ships,
+.cups,
+.books,
+.watch {
     text-align: center;
-    font-size: 60px;
-    
+    font-family: "Abhaya Libre", serif;
+    color: #288990;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.images_1,
+.images_2,
+.images_3,
+.images_4 {
+    width: 200px;
+    height: 200px;
+    max-width: 100%;
+    border-radius: 50%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: transform 0.4s ease;
+}
+
+.images_1 {
+    background-image: url("https://images.unsplash.com/photo-1500375592092-40eb2168fd21?auto=format&fit=crop&w=600&q=80");
+}
+
+.images_2 {
+    background-image: url("https://images.unsplash.com/photo-1514228742587-6b1558fcca3d?auto=format&fit=crop&w=600&q=80");
+}
+
+.images_3 {
+    background-image: url("https://images.unsplash.com/photo-1544947950-fa07a98d237f?auto=format&fit=crop&w=600&q=80");
+}
+
+.images_4 {
+    background-image: url("https://images.unsplash.com/photo-1524592094714-0f0654e20314?auto=format&fit=crop&w=600&q=80");
+}
+
+.ships:hover .images_1,
+.cups:hover .images_2,
+.books:hover .images_3,
+.watch:hover .images_4 {
+    transform: scale(1.06);
+}
+
+.ships h1,
+.cups h1,
+.books h1,
+.watch h1 {
+    font-size: 24px;
+    margin-top: 15px;
+}
+
+.ships h3,
+.cups h3,
+.books h3,
+.watch h3 {
+    font-family: "Dancing Script", cursive;
+    font-size: 22px;
 }
 
 
+/* =========================================
+   SALES SHOWCASE
+========================================= */
 
-.collection{
+#sales_sec {
+    min-height: 160vh;
+    width: 100%;
+    padding: 30px 4%;
+    background-color: #f8f4ec;
+}
+
+.sales_sec_1,
+.sales_sec_2 {
+    min-height: 75vh;
+    width: 100%;
     display: flex;
     justify-content: space-around;
-    width: 100%;
-    height: 70vh;
-    
+    align-items: center;
+    gap: 30px;
 }
 
-.ships{
-    text-align: center;
-    font-family: "Abhaya Libre", serif;
-    color: #288990; 
-    object-fit: cover;
-    font-size: 15px;font-weight: bold;
-     
-}
-
-.ships > h3{
-    font-family: "Dancing Script", cursive;
-}    
-    
-    
-.cups{
-    text-align: center;
-    font-family: "Abhaya Libre", serif;
-    color: #288990;
-    object-fit: cover;
-    font-size: 15px;font-weight: bold;
-}
-.cups > h3{
-    font-family: "Dancing Script", cursive;
-}
-
-.books{
-    text-align: center;
-    font-family: "Abhaya Libre", serif;
-    color: #288990;
-    font-size: 15px;font-weight: bold;
-}
-.books > h3{
-    font-family: "Dancing Script", cursive;
-}
-
-
-.watch{
-    text-align: center;
-    font-family: "Abhaya Libre", serif;
-    color: #288990;
-    font-size: 15px;font-weight: bold;
-}
-.watch > h3{
-    font-family: "Dancing Script", cursive;
-}
-#sales_sec{
-    height: 160vh;
-    width: 100%;
-    
-    
-}
-.sales_sec_1{
-   height: 80vh;
-   width: 100%;
-   display:flex;
-   justify-content: space-around;
-   align-items: center;
-}
-
-.sales_sec_card_1{
-    height: 80vh;
+.sales_sec_card_1,
+.sales_sec_card_2,
+.sales_sec_card_3 {
+    min-height: 70vh;
     width: 50%;
-    
     display: flex;
     justify-content: center;
     align-items: center;
-    padding-bottom: 200px;
     flex-direction: column;
-   
+    text-align: center;
+    padding: 20px;
 }
-.card1{
+
+.card1,
+.card2,
+.card3 {
+    width: min(100%, 320px);
     height: 400px;
-    width: 300px;
-    background-color: aqua;
-    background-image: url(./asset/crad1.jpg);
+    background-color: #e6d8c4;
     background-size: cover;
-
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 5px;
+    transition: transform 0.4s ease;
 }
 
-.sales_sec_card_1 > h3{
-    font-family: "Dancing Script", cursive;
+.card1 {
+    background-image: url("./asset/crad1.jpg");
 }
 
-.sales_sec_card_1 > h1{
-    font-size: 25px;
+.card2 {
+    background-image: url("./asset/card2.jpg");
+}
+
+.card3 {
+    background-image: url("./asset/card3.jpg");
+}
+
+.card1:hover,
+.card2:hover,
+.card3:hover {
+    transform: scale(1.03);
+}
+
+.sales_sec_card_1 h1,
+.sales_sec_card_2 h1,
+.sales_sec_card_3 h1 {
     font-family: "Abhaya Libre", serif;
+    font-size: 28px;
+    margin-top: 20px;
 }
 
-
-.sales_sec_card_2{
-    height: 80vh;
-    width: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    
-    flex-direction: column;
-}
-
-.sales_sec_card_2 > h3{
+.sales_sec_card_1 h3,
+.sales_sec_card_2 h3,
+.sales_sec_card_3 h3 {
     font-family: "Dancing Script", cursive;
-}
-
-.sales_sec_card_2 > h1{
-    font-size: 25px;
-    font-family: "Abhaya Libre", serif;
-}
-
-.card2{
-    height: 400px;
-    width: 300px;
-    background-color: aqua;
-    background-image: url(./asset/card2.jpg);
-    background-size: cover;
-
-}
-
-
-
-
-
-.sales_sec_2{
-    height: 80vh;
-    width: 100%;
-    display:flex;
-    justify-content: space-around;
-    align-items: center;
- }
-
- .sales_sec_card_3{
-    height: 80vh;
-    width: 50%;
-    
-    display: flex;
-    justify-content: center;
-    align-items: center;
-   
-    flex-direction: column;
-
-}
-.sales_sec_card_3 > h3{
-    font-family: "Dancing Script", cursive;
-}
-
-.sales_sec_card_3 > h1{
-    font-size: 25px;
-    font-family: "Abhaya Libre", serif;
-}
-
-
-.card3{
-    height: 400px;
-    width: 290px;
-    background-color: aqua;
-    background-image: url(./asset/card3.jpg) ;
-    background-size:contain;
-    
-
-}
-.sales_sec_card_4{
-    height: 80vh;
-    width: 50%;
-    display: flex;
-    justify-content:center;
-    align-content: center;
-    
-    flex-direction: column;
-    padding-left: 50px;
-   
-    
-}
-
-.card4{
-    height: 300px;
-    border-left: black 2px dashed;
-    display: flex;
-    justify-content: center;
-    
-    flex-direction: column;
-    padding-left: 100px;
-    
-}
-
-.card4 > h1{
-    font-family: "Dancing Script", cursive;
-}
-
-.card4 > h2{
-    font-size: 50px;
-    font-family: "Abhaya Libre", serif;
+    font-size: 23px;
     color: #035f66;
 }
 
-#box{
-    height: 300px;
+.sales_sec_card_4 {
+    min-height: 70vh;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+}
+
+.card4 {
+    width: 100%;
+    min-height: 300px;
+    border-left: 2px dashed #035f66;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding-left: 40px;
+}
+
+.card4 h1 {
+    font-family: "Dancing Script", cursive;
+    font-size: 32px;
+}
+
+.card4 h2 {
+    font-size: clamp(30px, 4vw, 50px);
+    font-family: "Abhaya Libre", serif;
+    color: #035f66;
+}
+Part 2 of 3 — Promotional boxes, top picks, brands, news, scrolling gallery, footer
+css
+
+/* =========================================
+   PROMOTIONAL BOXES
+========================================= */
+
+#box {
+    min-height: 300px;
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 50px;
-    margin-bottom: 100px;
+    flex-wrap: wrap;
+    gap: 30px;
+    padding: 30px 5%;
+    margin-bottom: 40px;
 }
 
-.box1{
-    height: 200px;
-    width: 600px;
+.box1,
+.box2 {
+    min-height: 220px;
+    flex: 1 1 350px;
+    max-width: 600px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 30px;
+    background-repeat: no-repeat;
+    background-position: right center;
+    background-size: auto 85%;
+    border-radius: 5px;
+}
+
+.box1 {
     background-color: #ffebd7;
-    background-image: url(./asset/pocketclock1.png);
-    background-repeat: repeat-y;
-    background-position: right;
-    padding-left: 30px;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    
-
+    background-image: url("./asset/pocketclock1.png");
 }
 
-.box1 > h2{
-    font-family: "Dancing Script", cursive;
-}
-
-.box1 > h1{
-    font-size: 40px;
-    font-family: "Abhaya Libre", serif;
-   
-}
-
-.box2{
-    height: 200px;
-    width: 600px;
+.box2 {
     background-color: #fec9c9;
-    background-image: url(./asset/bamboocraft.png);
-    background-repeat: repeat-y;
-    background-position: right;
-    
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-   padding-left: 30px;
-  
-
+    background-image: url("./asset/bamboocraft.png");
 }
 
-.box2 > h2{
-    font-family: "Dancing Script", cursive;
-}
-
-.box2 > h1{
-    font-size: 40px;
+.box1 h1,
+.box2 h1 {
+    font-size: clamp(28px, 3vw, 40px);
     font-family: "Abhaya Libre", serif;
-   
-    
+    max-width: 70%;
 }
-#top_picks{
-    
+
+.box1 h2,
+.box2 h2 {
+    font-family: "Dancing Script", cursive;
+    margin-top: 10px;
+    color: #035f66;
+}
+
+
+/* =========================================
+   TOP PICKS
+========================================= */
+
+#top_picks {
     width: 100%;
+    padding: 50px 5%;
     display: flex;
     align-items: center;
     flex-direction: column;
-    margin-bottom: 20vh;
-    
-   
-}
-.top_pick_collections{
-
-    height: 100vh;
-    width: 80%;
-
-     display: grid;
-        
-    grid-template-rows: 50vh 50vh;
-    grid-template-columns:25% 25% 25% 25%;
-    background: linear-gradient(to bottom, rgba(255,255,255,0.15) 0%, rgba(0,0,0,0.15) 100%), 
-    radial-gradient(at top center, rgba(255,255,255,0.40) 0%, rgba(0,0,0,0.40) 120%) #989898;
-    
-      
-}
-
-.top_picks_tittle{
-    height: 20vh;
-    width: 100%;
-    text-align: center;
     margin-bottom: 50px;
 }
-.top_picks_tittle > h1{
-    font-family: "Dancing Script", cursive;
 
+.top_picks_tittle {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 40px;
 }
 
-.top_picks_tittle > h2{
-   
-    font-size: 40px;
+.top_picks_tittle h1 {
+    font-family: "Dancing Script", cursive;
+    font-size: 32px;
+}
+
+.top_picks_tittle h2 {
+    font-size: clamp(30px, 4vw, 40px);
     font-family: "Abhaya Libre", serif;
     color: #035f66;
-
 }
 
-
-.top_pick_card1{
-    height: auto;
-    width: 100%;
-    
-    
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    border-right: 1px solid whitesmoke;
-    border-bottom: 1px solid whitesmoke;
-}
-.top_pick_card1 > h1{
-    font-family: "Dancing Script", cursive;
-    font-size: 20px;
-
-}
-
-.top_pick_card2{
-    height: auto;
-    width: 100%;
-    
-    
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    border-right: 1px solid whitesmoke;
-    border-bottom: 1px solid whitesmoke;
-}
-.top_pick_card2 > h1{
-    font-family: "Dancing Script", cursive;
-    font-size: 20px;
-
-}
-
-
-.top_pick_card3{
-    height: auto;
-    width: 100%;
-    
-    
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    border-right: 1px solid whitesmoke;
-    border-bottom: 1px solid whitesmoke;
-}
-.top_pick_card3 > h1{
-    font-family: "Dancing Script", cursive;
-    font-size: 20px;
-
-}
-
-.top_pick_card4{
-    height: auto;
-    width: 100%;
-    
-    
-    
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    border-right: 1px solid whitesmoke;
-    border-bottom: 1px solid whitesmoke;
-}
-.top_pick_card4 > h1{
-    font-family: "Dancing Script", cursive;
-    font-size: 20px;
-
-}
-
-.top_pick_card5{
-    height: auto;
-    width: 100%;
-    
-    
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    border-right: 1px solid whitesmoke;
-    border-bottom: 1px solid whitesmoke;
-}
-
-.top_pick_card5 > h1{
-    font-family: "Dancing Script", cursive;
-    font-size: 20px;
-
-}
-
-.top_pick_card6{
-    height: auto;
-    width: 100%;
-    
-    
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    border-right: 1px solid whitesmoke;
-    border-bottom: 1px solid whitesmoke;
-}
-
-.top_pick_card6 > h1{
-    font-family: "Dancing Script", cursive;
-    font-size: 20px;
-
-}
-
-.top_pick_card7{
-    height: auto;
-    width: 100%;
-    
-    
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    border-right: 1px solid whitesmoke;
-    
-}
-
-.top_pick_card7 > h1{
-    font-family: "Dancing Script", cursive;
-    font-size: 20px;
-
-}
-
-
-.top_pick_card7:hover{
-    height: auto;
-    width: 100%;
-    background-color: black;
-    transition: 0.5s ease-in-out;
-    color: aliceblue;
-
-    border-radius: 40px;
-   
-
-}
-
-.top_pick_card1:hover{
-    height: auto;
-    width: 100%;
-    background-color: black;
-    transition: 0.5s ease-in-out;
-    color: aliceblue;
-
-    border-radius: 40px;
-
-}
-.top_pick_card2:hover{
-    height: auto;
-    width: 100%;
-    background-color: black;
-    transition: 0.5s ease-in-out;
-    color: aliceblue;
-
-    border-radius: 40px;
-
-}
-.top_pick_card3:hover{
-    height: auto;
-    width: 100%;
-    background-color: black;
-    transition: 0.5s ease-in-out;
-    color: aliceblue;
-
-    border-radius: 40px;
-
-}
-
-.top_pick_card4:hover{
-    height: auto;
-    width: 100%;
-    background-color: black;
-    transition: 0.5s ease-in-out;
-    color: aliceblue;
-
-    border-radius: 40px;
-
-}
-
-.top_pick_card5:hover{
-    height: 100%;
-    width: 100%;
-    background-color: black;
-    transition: 0.5s ease-in-out;
-    color: aliceblue;
-
-    border-radius: 40px;
-
-}
-
-.top_pick_card6:hover{
-    height: auto;
-    width: 100%;
-    background-color: black;
-    transition: 0.5s ease-in-out;
-    color: aliceblue;
-
-    border-radius: 40px;
-
-}
-
-.top_pick_card8{
-    height: auto;
-    width: 100%;
-    
-    
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    border-right: 1px solid whitesmoke;
-    border-left: 1px solid whitesmoke;
-    
-}
-
-.top_pick_card8:hover{
-    height: auto;
-    width: 100%;
-    background-color: black;
-    transition: 0.5s ease-in-out;
-    color: aliceblue;
-
-    border-radius: 40px;
-}
-
-.top_pick_card8 > h1{
-    font-family: "Dancing Script", cursive;
-    font-size: 20px;
-
-}
-
-#shop_by_brand{
-height: 80vh;
-width: 100%;
-display: flex;
-justify-content: center;
-align-items: center;
-}
-
-.brands{
-    
-    height: 50vh;
+.top_pick_collections {
     width: 90%;
-    background-color:#fec9c9;
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    background:
+        linear-gradient(
+            to bottom,
+            rgba(255, 255, 255, 0.15),
+            rgba(0, 0, 0, 0.15)
+        ),
+        #989898;
+}
+
+.top_pick_card1,
+.top_pick_card2,
+.top_pick_card3,
+.top_pick_card4,
+.top_pick_card5,
+.top_pick_card6,
+.top_pick_card7,
+.top_pick_card8 {
+    min-width: 0;
+    min-height: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 15px;
+    border-right: 1px solid whitesmoke;
+    border-bottom: 1px solid whitesmoke;
+    transition:
+        background-color 0.4s ease,
+        color 0.4s ease,
+        border-radius 0.4s ease;
+}
+
+.top_pick_collections img {
+    max-width: 100%;
+    height: 220px;
+    object-fit: contain;
+}
+
+.top_pick_collections h1 {
+    font-family: "Dancing Script", cursive;
+    font-size: 21px;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.top_pick_card1:hover,
+.top_pick_card2:hover,
+.top_pick_card3:hover,
+.top_pick_card4:hover,
+.top_pick_card5:hover,
+.top_pick_card6:hover,
+.top_pick_card7:hover,
+.top_pick_card8:hover {
+    background-color: #035f66;
+    color: aliceblue;
+    border-radius: 15px;
+}
+
+
+/* =========================================
+   SHOP BY BRAND
+========================================= */
+
+#shop_by_brand {
+    min-height: 80vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 5%;
+}
+
+.brands {
+    min-height: 50vh;
+    width: 100%;
+    padding: 30px;
+    background-color: #fec9c9;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
 }
 
-.brands > h2{
+.brands h2 {
     font-family: "Dancing Script", cursive;
     text-align: center;
     margin: 10px;
-
+    font-size: 30px;
 }
 
-.brands > h1{
-    
+.brands h1 {
     font-size: 40px;
     font-family: "Abhaya Libre", serif;
     color: #035f66;
     text-align: center;
-
 }
-.brands_logo{
-    height: 40vh;
+
+.brands_logo {
+    min-height: 30vh;
     width: 100%;
-    display: flex;
-    justify-content:  space-around ;
-    align-items: center;
-   
-}
-
-#news{
-    height: 80vh;
-    width: 100% ;
-    display: flex;
-    justify-content: center;
-    align-items:center;
-    flex-direction: column;
-}
-
-#news > h1{
-    font-size: 40px;
-    font-family: "Abhaya Libre", serif;
-    color: #035f66;
-    text-align: center;
-    font-weight: lighter;
-    
-}
-#news > h2{
-    font-family: "Dancing Script", cursive;
-    text-align: center;
-
-   
-
-}
-
-.news_card{
-    width: 70vw;
-    height: 600px;
     display: flex;
     justify-content: space-around;
-   
-    
-
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
 }
 
-.cd{
-    height: 500px;
-    width: 20vw ;
-    
+.brands_logo img {
+    max-width: 140px;
+    height: 110px;
+    object-fit: contain;
+}
+
+
+/* =========================================
+   LATEST NEWS
+========================================= */
+
+#news {
+    min-height: 80vh;
+    width: 100%;
+    padding: 50px 5%;
     display: flex;
-    
+    justify-content: center;
+    align-items: center;
     flex-direction: column;
-    text-align: left;
-    
+    background-color: #f8f4ec;
 }
 
-.cd > h1{
-    font-size: 25px;
+#news > h1 {
+    font-size: 40px;
     font-family: "Abhaya Libre", serif;
     color: #035f66;
+    text-align: center;
+    font-weight: 600;
 }
 
-.cd > h3{
-
+#news > h2 {
     font-family: "Dancing Script", cursive;
+    text-align: center;
+    font-size: 30px;
 }
 
-#scroll_img{
+.news_card {
     width: 100%;
-    height: 400px;
+    max-width: 1200px;
     display: grid;
-    grid-template-rows: 400px;
-    grid-template-columns: 20% 20% 20% 20% 20%;
-    margin-top: 100px;
-
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 25px;
 }
 
-footer{
-    height: 50vh;
+.cd {
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    background-color: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    padding-bottom: 20px;
+    transition: transform 0.3s ease;
+}
+
+.cd:hover {
+    transform: translateY(-5px);
+}
+
+.cd img {
+    display: block;
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+    background-color: #eee8df;
+}
+
+.cd h1 {
+    font-size: 24px;
+    font-family: "Abhaya Libre", serif;
+    color: #035f66;
+    padding: 0 18px;
+}
+
+.cd h3 {
+    font-family: "Dancing Script", cursive;
+    font-size: 22px;
+    padding: 0 18px;
+}
+
+.cd p {
+    padding: 0 18px;
+    color: #71695f;
+    line-height: 1.6;
+}
+
+
+/* =========================================
+   HORIZONTAL IMAGE GALLERY
+========================================= */
+
+#scroll_img {
+    width: 100%;
+    min-height: 400px;
+    display: flex;
+    gap: 15px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    padding: 20px 0;
+    margin-top: 60px;
+    scroll-snap-type: x mandatory;
+}
+
+#scroll_img img {
+    flex: 0 0 20%;
+    width: 20%;
+    min-width: 200px;
+    height: 350px;
+    object-fit: cover;
+    scroll-snap-align: start;
+    transition: transform 0.3s ease;
+}
+
+#scroll_img img:hover {
+    transform: scale(1.03);
+}
+
+
+/* =========================================
+   FOOTER
+========================================= */
+
+footer {
+    min-height: 50vh;
     width: 100%;
     display: flex;
     flex-direction: column;
-    margin-top: 100PX;
+    margin-top: 60px;
     background-color: #ffebd7;
-    
-
+    padding: 20px 0;
 }
 
-.footer_logo{
-    height:20vh;
+.footer_logo {
+    min-height: 20vh;
     width: 100%;
     display: flex;
     justify-content: center;
-    
+    align-items: center;
 }
 
-.footer_content{
-    height: 35vh;
+.footer_logo img {
+    height: 90px;
+    width: auto;
+    object-fit: contain;
+}
+
+.footer_content {
     width: 100%;
     display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 20px;
+    padding: 20px 5%;
 }
 
-.footer_content_left{
-    height: 25vh;
+.footer_content_left,
+.footer_content_right {
     width: 30%;
     color: #035f66;
     display: flex;
-    justify-content: end;
-    align-items: flex-end;
-    
+    align-items: center;
 }
 
-.footer_content_left li{
+.footer_content_left {
+    justify-content: flex-end;
+}
+
+.footer_content_right {
+    justify-content: flex-start;
+}
+
+.footer_content_left ul,
+.footer_content_right ul {
     list-style: none;
+}
+
+.footer_content_left li,
+.footer_content_right li {
     padding-top: 10px;
     font-family: "Abhaya Libre", serif;
-    
+    font-size: 18px;
 }
 
-.footer_content_center{
-    height: 25vh;
+.footer_content_center {
     width: 40%;
     display: flex;
     justify-content: center;
-    align-items: end;
-    flex-direction: row;
+    align-items: center;
+    gap: 8px;
 }
 
+.footer_content_center input[type="email"] {
+    min-width: 0;
+    width: 65%;
+    height: 35px;
+    border: 1px solid #035f66;
+    padding: 0 10px;
+}
 
+.footer_content_center input[type="submit"] {
+    background-color: #035f66;
+    color: aliceblue;
+    height: 35px;
+    width: 70px;
+    border: 0;
+    cursor: pointer;
+}
 
-
-
-.footer_content_right{
-    height: 25vh;
-    width: 30%;
-    color: #035f66;
+.footer_icon {
     display: flex;
-    justify-content: start;
-    align-items: flex-start;
-    align-items: end;
-    
+    justify-content: center;
+    align-items: center;
+}
+Part 3 of 3 — Responsive CSS for tablets and phones
+css
+
+/* =========================================
+   RESPONSIVE: TABLETS
+========================================= */
+
+@media (max-width: 1000px) {
+
+    nav {
+        gap: 30px;
+    }
+
+    .collection {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        row-gap: 35px;
+    }
+
+    .top_pick_collections {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .news_card {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .sales_sec_1,
+    .sales_sec_2 {
+        gap: 10px;
+    }
+
+    .card1,
+    .card2,
+    .card3 {
+        height: 350px;
+    }
 }
 
-.footer_content_right li{
-    list-style: none;
-    padding-top: 10px;
-    font-family: "Abhaya Libre", serif;
+
+/* =========================================
+   RESPONSIVE: MOBILE
+========================================= */
+
+@media (max-width: 650px) {
+
+    header {
+        min-height: 75px;
+        padding: 8px 3%;
+    }
+
+    .head_left_txt {
+        width: 25%;
+    }
+
+    .head_left_txt h1 {
+        font-size: 19px;
+    }
+
+    .logo {
+        width: 35%;
+    }
+
+    .logo img {
+        height: 50px;
+    }
+
+    .head_right_icon {
+        width: 40%;
+        gap: 8px;
+    }
+
+    .head_right_icon img {
+        width: 19px;
+        height: 19px;
+    }
+
+    nav {
+        min-height: auto;
+        gap: 15px;
+        padding: 15px 8px;
+    }
+
+    nav a {
+        font-size: 13px;
+    }
+
+    main {
+        flex-direction: column;
+        min-height: auto;
+        background-position: center;
+    }
+
+    .main_left {
+        width: 100%;
+        min-height: 350px;
+        padding: 35px 20px;
+        text-align: center;
+    }
+
+    .main_right {
+        width: 100%;
+        min-height: 250px;
+        padding: 10px;
+    }
+
+    .main_right img {
+        max-height: 250px;
+    }
+
+    .ex_txt_1 {
+        font-size: 32px;
+    }
+
+    .ex_txt_2 {
+        font-size: 40px;
+    }
+
+    #shopping_category {
+        min-height: auto;
+    }
+
+    .category_txt {
+        min-height: 180px;
+    }
+
+    .category_txt_1 {
+        font-size: 32px;
+    }
+
+    .category_txt_2 {
+        font-size: 40px;
+    }
+
+    .collection {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 30px 10px;
+    }
+
+    .images_1,
+    .images_2,
+    .images_3,
+    .images_4 {
+        width: 140px;
+        height: 140px;
+    }
+
+    .ships h1,
+    .cups h1,
+    .books h1,
+    .watch h1 {
+        font-size: 20px;
+    }
+
+    #sales_sec {
+        min-height: auto;
+    }
+
+    .sales_sec_1,
+    .sales_sec_2 {
+        min-height: auto;
+        flex-direction: column;
+        gap: 25px;
+    }
+
+    .sales_sec_card_1,
+    .sales_sec_card_2,
+    .sales_sec_card_3,
+    .sales_sec_card_4 {
+        width: 100%;
+        min-height: auto;
+        padding: 20px 5px;
+    }
+
+    .card1,
+    .card2,
+    .card3 {
+        height: 330px;
+    }
+
+    .card4 {
+        padding-left: 25px;
+        min-height: 250px;
+    }
+
+    #box {
+        margin-bottom: 20px;
+    }
+
+    .box1,
+    .box2 {
+        flex-basis: 100%;
+        min-height: 180px;
+        background-size: auto 70%;
+        padding: 20px;
+    }
+
+    .box1 h1,
+    .box2 h1 {
+        font-size: 29px;
+        max-width: 75%;
+    }
+
+    #top_picks {
+        margin-bottom: 30px;
+    }
+
+    .top_picks_tittle {
+        height: auto;
+        margin-bottom: 30px;
+    }
+
+    .top_picks_tittle h2 {
+        font-size: 32px;
+    }
+
+    .top_pick_collections {
+        width: 100%;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        grid-template-rows: auto;
+    }
+
+    .top_pick_card1,
+    .top_pick_card2,
+    .top_pick_card3,
+    .top_pick_card4,
+    .top_pick_card5,
+    .top_pick_card6,
+    .top_pick_card7,
+    .top_pick_card8 {
+        min-height: 220px;
+    }
+
+    .top_pick_collections img {
+        height: 165px;
+    }
+
+    #shop_by_brand {
+        min-height: auto;
+        padding: 30px 5%;
+    }
+
+    .brands {
+        min-height: auto;
+        padding: 25px 12px;
+    }
+
+    .brands h1 {
+        font-size: 32px;
+    }
+
+    .brands_logo {
+        min-height: auto;
+        padding-top: 20px;
+        gap: 15px;
+    }
+
+    .brands_logo img {
+        max-width: 90px;
+        height: 75px;
+    }
+
+    #news {
+        min-height: auto;
+        padding: 40px 5%;
+    }
+
+    #news > h1 {
+        font-size: 34px;
+    }
+
+    .news_card {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    .cd {
+        width: 100%;
+        height: auto;
+    }
+
+    .cd img {
+        height: 240px;
+    }
+
+    .cd h1 {
+        font-size: 23px;
+    }
+
+    #scroll_img {
+        margin-top: 30px;
+        min-height: auto;
+    }
+
+    #scroll_img img {
+        flex: 0 0 75%;
+        width: 75%;
+        min-width: 220px;
+        height: 280px;
+    }
+
+    footer {
+        min-height: auto;
+        margin-top: 30px;
+    }
+
+    .footer_logo {
+        min-height: 100px;
+    }
+
+    .footer_content {
+        flex-direction: column;
+        gap: 25px;
+        padding: 20px;
+    }
+
+    .footer_content_left,
+    .footer_content_right,
+    .footer_content_center {
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .footer_content_center input[type="email"] {
+        width: 70%;
+    }
+
+    .footer_content_left li,
+    .footer_content_right li {
+        text-align: center;
+    }
+}
+
+
+/* =========================================
+   RESPONSIVE: SMALL MOBILE
+========================================= */
+
+@media (max-width: 380px) {
+
+    .collection {
+        grid-template-columns: 1fr;
+    }
+
+    .images_1,
+    .images_2,
+    .images_3,
+    .images_4 {
+        width: 170px;
+        height: 170px;
+    }
+
+    .top_pick_collections {
+        grid-template-columns: 1fr;
+    }
+
+    .ex_txt_2 {
+        font-size: 34px;
+    }
+
+    .head_right_icon {
+        gap: 5px;
+    }
+
+    nav {
+        gap: 10px;
+    }
+
+    nav a {
+        font-size: 12px;
+    }
 }
